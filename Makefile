@@ -7,6 +7,8 @@ rust-version:
 	clippy-driver --version		#rust linter
 
 setup:
+	sudo apt-get install libssl-dev
+	sudo apt-get install pip
 	pip3 install cargo-lambda
 
 format:
