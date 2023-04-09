@@ -24,7 +24,7 @@ release:
 	cargo build --release
 		
 build:
-	cargo lambda build --release
+	cargo lambda build --release --target x86_64-unknown-linux-gnu
 
 deploy:
 	cargo lambda deploy
