@@ -6,11 +6,15 @@ rust-version:
 	rustup --version			#rust toolchain manager
 	clippy-driver --version		#rust linter
 
+setup:
+	pip3 install cargo-lambda
+
 format:
 	cargo fmt --quiet
 
 lint:
 	cargo clippy --quiet
+
 run:
 	cargo run 
 
@@ -28,8 +32,8 @@ test:
 
 invoke:
 	cargo lambda invoke --remote \
-  		--data-ascii '{"prompt": "A baby panda riding a skateboard", "n_steps": 10}' \
+  		--data-ascii '{"prompt1": "Hello World!", "prompt2": Hello Rust}' \
   		--output-format json \
-  		stable-diffusion-rs
+  		sentence-similarity-rs
 
 all: format lint test run

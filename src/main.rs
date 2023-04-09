@@ -1,9 +1,7 @@
 // Crates
 use lambda_runtime::{run, service_fn, Error, LambdaEvent};
-use serde::{Deserialize, Serialize};
-use reqwest;
-use serde_json::json;
 use sentence_similarity_rs::sentence_similarity;
+use serde::{Deserialize, Serialize};
 
 /// This is a made-up example. Requests come into the runtime as unicode
 /// strings in json format, which can map to any structure that implements `serde::Deserialize`
