@@ -27,7 +27,7 @@ build:
 	cargo lambda build --release --target x86_64-unknown-linux-gnu.2.17 --output-format zip
 
 deploy:
-	cargo lambda deploy
+	cargo lambda deploy --iam-role arn:aws:lambda:us-east-1:XXXXXXXXXXXX:function:sentence-similarity-rs sentence-similarity-rs
 
 test:
 	cargo test --quiet
