@@ -33,6 +33,10 @@ The output of the application is a JSON containing the similarity score (stored 
     - Use the AWS Lambda console in your browser to upload the resulting zip file as a lambda function. This file will be called `bootstrap.zip` and can be found in the `target/lambda` folder.
 4. Run `make invoke` to see if it worked! If so, you should get a json response with a similarity score. You may need to alter the name of the lambda function in the Makefile here as well if you changed it in step 3.
 
+## Docker Container
+
+The docker container can be found [here](https://hub.docker.com/repository/docker/brycewhit13/sentence-similarity-rs/general).
+
 ## Future Enhancements
 
 - Enable the user to compare the similarity of multiple sentences to a single base sentence instead of just a one-to-one comparison.
